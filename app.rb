@@ -41,17 +41,17 @@ erb :muffins
 end
 
 get '/custom' do
-    @cake_1 = Cake.new()
-    @cake_2 = Cake.new() 
-    @cake_3 = Cake.new()
-    @cake_4 = Cake.new()
-    @cake_5 = Cake.new()
-    @cake_6 = Cake.new()
-    @cake_7 = Cake.new()
-    @cake_8 = Cake.new()
-    @cake_9 = Cake.new()
-    @cakes = [@cake_1, @cake_2, @cake_3, @cake_4, @cake_5, @cake_6, @cake_7, @cake_8, @cake_9]
-    erb :custom
+    @cake_1 = Cake.new("Floral Cake", "/photos/flower_cake.jpeg", "$150")
+    @cake_2 = Cake.new("Fruit Tart", "/photos/fruit_tart_cake.jpeg", "$80") 
+    @cake_3 = Cake.new("Fruit & Nut Cake", "/photos/fruit_nut_cake.jpeg", "$75")
+    @cake_4 = Cake.new("Coffee Cheese Cake", "/photos/coffee_cheese_cake.jpeg", "$75")
+    @cake_5 = Cake.new("Naked Vanilla Cake", "/photos/cake.jpeg", "$70")
+    @cake_6 = Cake.new("Fruit Pies", "/photos/piefilling.jpg", "$60")
+    @cakes = [@cake_1, @cake_2, @cake_3, @cake_4, @cake_5, @cake_6]
+erb :custom
+end
+get '/beverages' do
+    erb :beverages
 end
 
 get '/contact' do
