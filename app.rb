@@ -20,7 +20,10 @@ get '/cupcakes' do
     @cupcake_1 = Cupcake.new("Pretzel", "/photos/pretzel_cup.jpeg", "$3")
     @cupcake_2 = Cupcake.new("Peanut Butter Swirl", "/photos/pb_swirl_cup.jpeg", "$3")
     @cupcake_3 = Cupcake.new("Fruit Tart", "/photos/fruit_tart_cup.jpeg", "$3")
-    @cupcakes = [@cupcake_1, @cupcake_2, @cupcake_3]
+    @cupcake_4 = Cupcake.new("Strawberry Short Cake", "/photos/strawb_short_cup.jpg", "$3")
+    @cupcake_5 = Cupcake.new("Cherry Chocolate Chip", "/photos/cherry_choc_cup.jpg", "$3")
+    @cupcake_6 = Cupcake.new("Caipirinha", "/photos/caipirinha_cupcake.jpg", "$3")
+    @cupcakes = [@cupcake_1, @cupcake_2, @cupcake_3, @cupcake_4, @cupcake_5, @cupcake_6]
 erb :cupcakes
 end
 
@@ -28,7 +31,13 @@ get '/cookies' do
     @cookie_1 = Cookie.new("Macaron", "/photos/macaron.jpeg", "$4")
     @cookie_2 = Cookie.new("Linzer Tart", "photos/linzer_b_cook.jpeg", "$3")
     @cookie_3 = Cookie.new("Chocolate Chip", "/photos/choc_chip_cook.jpeg", "$2")
-    @cookies = [@cookie_1, @cookie_2, @cookie_3]
+    @cookie_4 = Cookie.new("Chocolate Macaroon", "/photos/choc_macaroon_cook.jpg", "$4")
+    @cookie_5 = Cookie.new("Ginger Star", "/photos/ginger_star_cook.jpeg", "$2")
+    @cookie_6 = Cookie.new("Lemon Curd", "/photos/lemon_curd_cookie.jpg", "$3")
+    @cookie_7 = Cookie.new("Peanut Butter Chocolate Mousse", "/photos/pb_choc_mousse.jpg", "$3")
+    @cookie_8 = Cookie.new("Sugar Cookie", "photos/sugar_cook.jpeg", "$2")
+    @cookie_9 = Cookie.new("Double Chocolate", "/photos/double_choc_cook.jpeg", "$3")
+    @cookies = [@cookie_1, @cookie_2, @cookie_3, @cookie_4, @cookie_5, @cookie_6, @cookie_7, @cookie_8, @cookie_9]
 erb :cookies
 end
 
@@ -36,7 +45,10 @@ get '/muffins' do
     @muffin_2 = Muffin.new("Corn Muffin", "/photos/corn_muff.jpeg", "$3")
     @muffin_1 = Muffin.new("Cherry Muffin", "/photos/cherry_muff.jpeg", "$3")
     @muffin_3 = Muffin.new("Blueberry Muffin", "/photos/blueb_muff.png", "$3")
-    @muffins = [@muffin_1, @muffin_2, @muffin_3]
+    @muffin_4 = Muffin.new("Red Currant Muffin", "/photos/currant_muff.jpg", "$3")
+    @muffin_5 = Muffin.new("Lemon Poppy Muffin", "/photos/lemon_poppy_muff.jpg", "$3")
+    @muffin_6 = Muffin.new("Blackberry Muffin", "/photos/other_blueb_muff.jpg", "$3")
+    @muffins = [@muffin_1, @muffin_2, @muffin_3, @muffin_4, @muffin_5, @muffin_6]
 erb :muffins
 end
 
