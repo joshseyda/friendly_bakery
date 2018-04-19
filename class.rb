@@ -36,6 +36,12 @@ class Cake < Pastry
     end
 end
 
+class Beverage < Pastry
+    attr_accessor :name, :src, :price, :description
+    def initialize(name ,src, price, description="")
+        super(name ,src, price, description="")
+    end
+end
 
 
 

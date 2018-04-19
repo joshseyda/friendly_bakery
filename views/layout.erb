@@ -7,35 +7,45 @@
     <link rel="stylesheet" href="/style.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
   </head>
   <body>
     <nav>
     <div class="nav-wrapper amber darken-1">
-      <a href="/home" class="brand-logo right">Bakery</a>
+      <a href="/home" class="brand-logo right">Pavilion</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="left hide-on-med-and-down">
-        <li><a href="/cookies">Cookies</a></li>
-        <li><a href="/cupcakes">Cupcakes</a></li>
-        <li><a href="/muffins">Muffins</a></li>
-        <li><a href="/custom">Custom Orders</a></li>
-        <li><a href="/beverages">Beverages</a></li>
-        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/cookies"><h5>Cookies</h5></a></li>
+        <li><a href="/cupcakes"><h5>Cupcakes</h5></a></li>
+        <li><a href="/muffins"><h5>Muffins</h5></a></li>
+        <li><a href="/custom"><h5>Custom Orders</h5></a></li>
+        <li><a href="/beverages"><h5>Beverages</h5></a></li>
+        <li><a href="/contact"><h5>Contact Us</h5></a></li>
+      </ul>
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="/cookies"><h5>Cookies</h5></a></li>
+        <li><a href="/cupcakes"><h5>Cupcakes</h5></a></li>
+        <li><a href="/muffins"><h5>Muffins</h5></a></li>
+        <li><a href="/custom"><h5>Custom Orders</h5></a></li>
+        <li><a href="/beverages"><h5>Beverages</h5></a></li>
+        <li><a href="/contact"><h5>Contact Us</h5></a></li>
       </ul>
     </div>
   </nav>
   <main>
   <div class="row">
-      <%= yield %>
-  </div>
+<%= yield %>
+</div>
 </main>
 <footer class="page-footer amber darken-1">
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
                 <h5 class="white-text">Thank you for choosing our bakery!</h5>
-                <p class="grey-text text-lighten-4">We hand craft all of our pastries with local, organic ingredients every morning.</p>
+                <h5 class="grey-text text-lighten-4">We hand craft all of our pastries with local, organic ingredients every morning.</h5>
               </div>
               <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Follow Us!</h5>
+                <h5 class="white-text center">Follow Us!</h5>
                 <div class="row">
                     <div class="col s3">
                         <a href="#"><img src="/photos/if_facebook-01-01_3066961.svg" class="social"></a>
@@ -54,12 +64,13 @@
           </div>
           <div class="footer-copyright">
             <div class="container">
-            © 2018 Bakery
+            © 2018 Pavilion
             <a class="grey-text text-lighten-4 right" href="#!">Vegan Bakery Collective</a>
             </div>
           </div>
         </footer>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+<script src="/main.js"></script>
 </body>
 </html>

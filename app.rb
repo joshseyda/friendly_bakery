@@ -17,9 +17,9 @@ get '/about'do
 end
 
 get '/cupcakes' do
-    @cupcake_2 = Cupcake.new("Lavender", "/photos/purp_cup.jpg", "$3")
-    @cupcake_1 = Cupcake.new("Red Velvet", "/photos/velv_cup.jpeg", "$3")
-    @cupcake_3 = Cupcake.new("Classic Chocolate", "/photos/choc_cup.jpeg", "$3")
+    @cupcake_1 = Cupcake.new("Pretzel", "/photos/pretzel_cup.jpeg", "$3")
+    @cupcake_2 = Cupcake.new("Peanut Butter Swirl", "/photos/pb_swirl_cup.jpeg", "$3")
+    @cupcake_3 = Cupcake.new("Fruit Tart", "/photos/fruit_tart_cup.jpeg", "$3")
     @cupcakes = [@cupcake_1, @cupcake_2, @cupcake_3]
 erb :cupcakes
 end
@@ -51,6 +51,10 @@ get '/custom' do
 erb :custom
 end
 get '/beverages' do
+    @bev_1 = Beverage.new("Espresso", "/photos/espresso_machine.jpeg", "$3")
+    @bev_2 = Beverage.new("Café latté", "/photos/latte_art.jpeg", "$4")
+    @bev_3 = Beverage.new("Assorted Teas", "/photos/tea_bags.jpg", "$3")
+    @beverages = [@bev_1, @bev_2, @bev_3]
     erb :beverages
 end
 
@@ -62,9 +66,58 @@ post '/contact' do
     from = Email.new(email: 'test@example.com')
     to = Email.new(email: 'jseyda@gmail.com')
     subject = 'My Bakery Order'
-    content = Content.new(type: 'text/plain', value: 'catalog of goods')
+    content = Content.new(type: 'text/html', value: '<table>
+
+        <tr>
+
+               <td align="center"><img src="/photos/bundt_cake.jpeg"></td>
+
+        </tr>
+
+        <tr>
+
+               <td>
+               <p>Thank you for requesting our Catalog, below you will see a list of products with price. For high resolution photos see our website.</p>
+               <ul>
+                    <li>Cookies</li>
+                    <li>Chocolate Chip $2</li>
+                    <li>Linzer Tart $3</li>
+                    <li>Macaron $4</li>
+                </ul>
+                <ul>
+                    <li>Muffins $3</li>
+                    <li>Cherry </li>
+                    <li>Corn </li>
+                    <li>Blueberry </li>
+                </ul>
+                <ul>
+                    <li>Cakes</li>
+                    <li>Floral Cake $150</li>
+                    <li>Fruit Tart $80</li>
+                    <li>Fruit & Nut Cake $75</li>
+                    <li><Coffee Cheese Cake $75</li>
+                    <li>Naked Vanilla Cake $70</li>
+                </ul>
+                <ul>
+                    <li>Cupcakes $3</li>
+                    <li>Pretzel</li>
+                    <li>Peanut Butter Swirl</li>
+                    <li>Fruit Tart</li>
+               </ul>
+               </td>
+
+        </tr>
+
+        <tr>
+
+               <td align="center">Pavilion Bakery</td>
+
+        </tr>
+
+</table>')
     mail = Mail.new(from, subject, to, content)
     sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
     response = sg.client.mail._('send').post(request_body: mail.to_json)
+    puts response.status_code
     erb :email_sent
 end
