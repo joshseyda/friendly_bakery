@@ -2,6 +2,8 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1 em;
 }
 
 main {
@@ -11,3 +13,22 @@ main {
 .social {
     width: 100%;
 }
+
+#enter {
+    font-size: 3em;
+}
+
+.btn-large {
+    font-size: 30px;
+}
+
+.banner {
+    width: 100%;
+}
+
+.landing {
+    width: 100%;
+}
+
+
+/* font-family: 'Amatic SC', cursive; */
