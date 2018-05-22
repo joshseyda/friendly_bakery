@@ -29,7 +29,7 @@
 ## How To Use
 ###### Scroll and click around the page and sign up for an email!
 ## Credit
-###### The user interface was built with [Materialize](http://materializecss.com/)Images are used courtesy of [Pexels](https://www.pexels.com/) the fonts used are from [Google Fonts](https://fonts.google.com/). 
+###### The user interface was built with [Google Materialize](http://materializecss.com/) Images are used courtesy of [Pexels](https://www.pexels.com/) the fonts used are from [Google Fonts](https://fonts.google.com/). 
 ## Licence
 ##### MIT License
 
