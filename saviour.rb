@@ -240,6 +240,10 @@ post '/contact' do
     erb :email_sent
 end
 
-
+<div class="row">
+  <div class="col s12 m6 center offset-m3">
+  <h4>We are a small, family run, vegan bakery. We work with local farmers to source only seasonal and organic raw ingredients to give you the best pastries possible.</h4>
+  </div>
+</div>
 
     
