@@ -3,6 +3,13 @@ require 'sinatra/reloader'
 require 'sendgrid-ruby'
 require_relative 'class.rb'
 include SendGrid
+require 'sinatra/base'
+
+class MyApp < Sinatra::Base
+  get "/" do
+    "hello world"
+  end
+end
 
 get '/' do
     erb :index, layout: :layout_land 
