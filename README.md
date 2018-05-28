@@ -1,4 +1,8 @@
 # Pavilion Bakery
+![landing]("public/photos/storefront_2.png")
+![hands]("public/photos/banner.jpg")
+![main_page]("public/photos/bakery1.png")
+![custom_page]("public/photos/bakery.png"))
 ## Motivation
 ###### This is a basic, full-stack web page created with Ruby, Sinatra, and the SendGrid API on the backend, Materialize, HTML5, CSS3, and JavaScript on the front end. SendGrid is sending out automated emails to customers.
 ## Build Status
